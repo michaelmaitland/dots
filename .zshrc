@@ -242,3 +242,10 @@ alias tb="nc termbin.com 9999"
 neofetch
 alias dots='/usr/bin/git --git-dir=/home/yasgur99/.dots/ --work-tree=/home/yasgur99'
 dots config --local status.showUntrackedFiles no
+
+# AndroidStudio Config
+export ANDROID_HOME=$HOME/Android/Sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools

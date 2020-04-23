@@ -71,7 +71,7 @@ keys = [
     Key([mod, "shift"], "q", lazy.shutdown()),
     Key([mod], "w", lazy.to_screen(0)),
     Key([mod], "e", lazy.to_screen(1)),
-    Key([mod], "x", lazy.spawn('oblogout')),
+    Key([mod], "x", lazy.spawn('arcolinux-logout')),
 
     #Key([mod], "f", lazy.window.toggle_fullscreen()),
 
@@ -586,7 +586,7 @@ floating_layout = layout.Floating(float_rules=[
     {'wmclass': 'Arandr'},
     {'wmclass': 'feh'},
     {'wmclass': 'Galculator'},
-    {'wmclass': 'Oblogout'},
+    {'wmclass': 'arcolinux-logout'},
     {'wmclass': 'xfce4-terminal'},
     {'wname': 'branchdialog'},
     {'wname': 'Open File'},
