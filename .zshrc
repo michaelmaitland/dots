@@ -8,7 +8,8 @@ export ZSH="/home/yasgur99/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="powerlevel9k/powerlevel9k"
+#ZSH_THEME="powerlevel9k/powerlevel9k"
+ZSH_THEME="agnoster"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -240,3 +241,4 @@ alias tb="nc termbin.com 9999"
 
 neofetch
 alias dots='/usr/bin/git --git-dir=/home/yasgur99/.dots/ --work-tree=/home/yasgur99'
+dots config --local status.showUntrackedFiles no
