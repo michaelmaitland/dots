@@ -33,7 +33,6 @@ from libqtile.config import Drag, Key, Screen, Group, Drag, Click, Rule
 from libqtile.command import lazy
 from libqtile import layout, bar, widget, hook
 from libqtile.widget import Spacer
-#import arcobattery
 
 #mod4 or mod = super key
 mod = "mod1"
@@ -230,9 +229,9 @@ for i in groups:
         Key(["mod1", "shift"], "Tab", lazy.screen.prev_group()),
 
 # MOVE WINDOW TO SELECTED WORKSPACE 1-10 AND STAY ON WORKSPACE
-        #Key([mod, "shift"], i.name, lazy.window.togroup(i.name)),
+        Key([mod, "shift"], i.name, lazy.window.togroup(i.name)),
 # MOVE WINDOW TO SELECTED WORKSPACE 1-10 AND FOLLOW MOVED WINDOW TO WORKSPACE
-        Key([mod, "shift"], i.name, lazy.window.togroup(i.name) , lazy.group[i.name].toscreen()),
+        #Key([mod, "shift"], i.name, lazy.window.togroup(i.name) , lazy.group[i.name].toscreen()),
     ])
 
 
@@ -248,11 +247,11 @@ layout_theme = init_layout_theme()
 
 layouts = [
     layout.MonadTall(margin=8, border_width=2, border_focus="#5e81ac", border_normal="#4c566a"),
-    layout.MonadWide(margin=8, border_width=2, border_focus="#5e81ac", border_normal="#4c566a"),
-    layout.Matrix(**layout_theme),
-    layout.Bsp(**layout_theme),
+    #layout.MonadWide(margin=8, border_width=2, border_focus="#5e81ac", border_normal="#4c566a"),
+    #layout.Matrix(**layout_theme),
+    #layout.Bsp(**layout_theme),
     layout.Floating(**layout_theme),
-    layout.RatioTile(**layout_theme),
+    #layout.RatioTile(**layout_theme),
     layout.Max(**layout_theme)
 ]
 
@@ -273,9 +272,6 @@ def init_colors():
 
 colors = init_colors()
 
-
-
-
 # WIDGETS FOR THE BAR
 
 def init_widgets_defaults():
@@ -289,9 +285,9 @@ widget_defaults = init_widgets_defaults()
 def init_widgets_list():
     prompt = "{0}@{1}: ".format(os.environ["USER"], socket.gethostname())
     widgets_list = [
-               widget.GroupBox(font="FontAwesome",
+               widget.GroupBox(font="Iosevka Nerd Font",
                         fontsize = 16,
-                        margin_y = 3, # changed from -1 when i was using iconds before
+                        margin_y = 3, # changed from -1 when i was using icons before
                         margin_x = 0,
                         padding_y = 6,
                         padding_x = 5,
@@ -312,7 +308,8 @@ def init_widgets_list():
                         background = colors[1]
                         ),
                widget.CurrentLayout(
-                        font = "Noto Sans Bold",
+                        font = "Iosevka Nerd Font",
+                        fontsize = 16,
                         foreground = colors[5],
                         background = colors[1]
                         ),
@@ -322,45 +319,11 @@ def init_widgets_list():
                         foreground = colors[2],
                         background = colors[1]
                         ),
-               widget.WindowName(font="Noto Sans",
-                        fontsize = 12,
+                widget.WindowName(font="Iosevka Nerd Font",
+                        fontsize = 16,
                         foreground = colors[5],
                         background = colors[1],
                         ),
-               # widget.Net(
-               #          font="Noto Sans",
-               #          fontsize=12,
-               #          interface="enp0s31f6",
-               #          foreground=colors[2],
-               #          background=colors[1],
-               #          padding = 0,
-               #          ),
-               # widget.Sep(
-               #          linewidth = 1,
-               #          padding = 10,
-               #          foreground = colors[2],
-               #          background = colors[1]
-               #          ),
-               # widget.NetGraph(
-               #          font="Noto Sans",
-               #          fontsize=12,
-               #          bandwidth="down",
-               #          interface="auto",
-               #          fill_color = colors[8],
-               #          foreground=colors[2],
-               #          background=colors[1],
-               #          graph_color = colors[8],
-               #          border_color = colors[2],
-               #          padding = 0,
-               #          border_width = 1,
-               #          line_width = 1,
-               #          ),
-               # widget.Sep(
-               #          linewidth = 1,
-               #          padding = 10,
-               #          foreground = colors[2],
-               #          background = colors[1]
-               #          ),
                # # do not activate in Virtualbox - will break qtile
                # widget.ThermalSensor(
                #          foreground = colors[5],
@@ -401,6 +364,29 @@ def init_widgets_list():
 	           #          ),
                widget.TextBox(
                         font="FontAwesome",
+                        text="  ",
+                        foreground=colors[7],
+                        background=colors[1],
+                        padding = 0,
+                        fontsize=16
+                        ),
+                widget.Net(
+                        font="Iosevka Nerd Font",
+                        fontsize=16,
+                        format = "{down} ↓↑{up}",
+                        interface="enp0s31f6",
+                        foreground=colors[2],
+                        background=colors[1],
+                        padding = 0,
+                        ),
+               widget.Sep(
+                        linewidth = 1,
+                        padding = 10,
+                        foreground = colors[2],
+                        background = colors[1]
+                        ),
+               widget.TextBox(
+                        font="FontAwesome",
                         text="  ",
                         foreground=colors[6],
                         background=colors[1],
@@ -432,10 +418,10 @@ def init_widgets_list():
                         fontsize=16
                         ),
                widget.Memory(
-                        font="Noto Sans",
+                        font="Iosevka Nerd Font",
                         format = '{MemUsed}M/{MemTotal}M',
                         update_interval = 1,
-                        fontsize = 12,
+                        fontsize = 16,
                         foreground = colors[5],
                         background = colors[1],
                        ),
@@ -454,9 +440,10 @@ def init_widgets_list():
                         fontsize=16
                         ),
                widget.Clock(
+                        font = "Iosevka Nerd Font",
                         foreground = colors[5],
                         background = colors[1],
-                        fontsize = 12,
+                        fontsize = 16,
                         format="%Y-%m-%d %H:%M"
                         ),
                widget.Sep(
@@ -468,7 +455,13 @@ def init_widgets_list():
                widget.Systray(
                         background=colors[1],
                         icon_size=20,
-                        padding = 4
+                        padding = 5
+                        ),
+               widget.Sep(
+                        linewidth = 1,
+                        padding = 10,
+                        foreground = colors[2],
+                        background = colors[1]
                         ),
               ]
     return widgets_list
