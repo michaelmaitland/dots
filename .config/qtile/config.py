@@ -258,15 +258,15 @@ layouts = [
 # COLORS FOR THE BAR
 
 def init_colors():
-    return [["#2F343F", "#2F343F"], # color 0
-            ["#2F343F", "#2F343F"], # color 1
+    return [["#000000", "#000000"], # color 0
+            ["#44475A", "#444758"], # color 1
             ["#c0c5ce", "#c0c5ce"], # color 2
-            ["#fba922", "#fba922"], # color 3
-            ["#3384d0", "#3384d0"], # color 4
+            ["#FFB86C", "#FFB86C"], # color 3
+            ["#66D9EF", "#66D9EF"], # color 4
             ["#f3f4f5", "#f3f4f5"], # color 5
-            ["#cd1f3f", "#cd1f3f"], # color 6
-            ["#62FF00", "#62FF00"], # color 7
-            ["#6790eb", "#6790eb"], # color 8
+            ["#BD93F9", "#BD93F9"], # color 6
+            ["#50FA7B", "#50FA7B"], # color 7
+            ["#8BE9FD", "#8BE9FD"], # color 8
             ["#a9a9a9", "#a9a9a9"]] # color 9
 
 
