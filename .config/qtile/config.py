@@ -56,14 +56,13 @@ def window_to_next_group(qtile):
 keys = [
 
 # FUNCTION KEYS
-
-    #Key([], "F12", lazy.spawn('xfce4-terminal --drop-down')),
-
 # SUPER + FUNCTION KEYS
 
     Key([mod], "Return", lazy.spawn('urxvt')),
     Key([mod, "shift"], "Return", lazy.spawn('dmenu_run -p Run: ')),
     Key([mod], "d", lazy.spawn('rofi -show run')),
+    Key([mod], "g", lazy.spawn('google-chrome-stable')),
+    Key([mod], "v", lazy.spawn('evince')),
     Key([mod], "Tab", lazy.next_layout()),
     Key([mod, "shift"], "c", lazy.window.kill()),
     Key([mod, "shift"], "r", lazy.restart()),
@@ -71,9 +70,9 @@ keys = [
     Key([mod], "w", lazy.to_screen(0)),
     Key([mod], "e", lazy.to_screen(1)),
     Key([mod], "x", lazy.spawn('arcolinux-logout')),
-
-    #Key([mod], "f", lazy.window.toggle_fullscreen()),
-
+    Key([mod], "f", lazy.window.toggle_fullscreen()),
+    Key([mod], "p", lazy.spawn('maim -s /tmp/screenshot.png; imgur.sh /tmp/screenshot.png | xclip -selection clipboard')),
+    Key([mod], "o", lazy.spawn('maim -s ~/Pictures/screenshots/$(date +%F-%T)')),
     # CHANGE FOCUS
     Key([mod], "k", lazy.layout.up()),
     Key([mod], "j", lazy.layout.down()),
@@ -143,9 +142,7 @@ keys = [
 
 # SCREENSHOTS
 
-    Key([], "Print", lazy.spawn("scrot 'ArcoLinux-%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f $$(xdg-user-dir PICTURES)'")),
-    Key([mod2], "Print", lazy.spawn('xfce4-screenshooter')),
-    Key([mod2, "shift"], "Print", lazy.spawn('gnome-screenshot -i')),
+    Key([mod], 'p', lazy.spawn('main -s ~/Pictures/screenshots/test.png')),
 
 # MULTIMEDIA KEYS
 
