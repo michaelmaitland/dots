@@ -1,0 +1,132 @@
+{
+   "checksum": "a810680beea1d1d02914884c6ef599c7",
+   "roots": {
+      "bookmark_bar": {
+         "children": [ {
+            "date_added": "13217997993115703",
+            "guid": "3299035c-7d71-447b-8716-c8566a095a78",
+            "id": "5",
+            "name": "Canvas",
+            "type": "url",
+            "url": "https://canvas.cornell.edu/"
+         }, {
+            "date_added": "13218236342226097",
+            "guid": "443ccc9d-460d-4af9-a6ba-4b15c4550432",
+            "id": "6",
+            "name": "mergg-react-native",
+            "type": "url",
+            "url": "https://github.com/Yasgur99/mergg-react-native"
+         }, {
+            "date_added": "13222863317401125",
+            "guid": "75383aad-c8d9-41cf-9880-c748aebe1418",
+            "id": "7",
+            "name": "mergg-react-native-refactored",
+            "type": "url",
+            "url": "https://github.com/Yasgur99/mergg-react-native-refactored"
+         }, {
+            "date_added": "13218236353886146",
+            "guid": "fa469a23-aff0-4e1e-b55c-446e083188b8",
+            "id": "8",
+            "name": "mergg-core",
+            "type": "url",
+            "url": "https://github.com/Yasgur99/mergg-core"
+         }, {
+            "date_added": "13218236390837023",
+            "guid": "bd05efeb-0897-41d6-830b-180987fbace9",
+            "id": "9",
+            "name": "Elastic Beanstalk",
+            "type": "url",
+            "url": "https://console.aws.amazon.com/elasticbeanstalk/home?region=us-east-1#/applications"
+         }, {
+            "date_added": "13218274201129385",
+            "guid": "404b9e92-b03e-4f78-b51e-822e3bf2044c",
+            "id": "10",
+            "name": "CodePipeline",
+            "type": "url",
+            "url": "https://console.aws.amazon.com/codesuite/codepipeline/pipelines/mergg-core/view?region=us-east-1#"
+         }, {
+            "date_added": "13243379719968072",
+            "guid": "1a24b74c-b6ca-487f-9f51-6975733a2a2c",
+            "id": "11",
+            "name": "CS 4410",
+            "type": "url",
+            "url": "https://www.cs.cornell.edu/courses/cs4410/2020fa/"
+         }, {
+            "date_added": "13243379654890359",
+            "guid": "e894a938-c042-42db-9620-da31645229f2",
+            "id": "12",
+            "name": "CS 4411",
+            "type": "url",
+            "url": "https://www.cs.cornell.edu/courses/cs4411/2020fa/"
+         }, {
+            "date_added": "13243207279806943",
+            "guid": "413e3bb3-a583-4f32-86fd-60e662e4bac8",
+            "id": "13",
+            "name": "CS4414",
+            "type": "url",
+            "url": "https://www.cs.cornell.edu/courses/cs4414/2020fa/"
+         }, {
+            "date_added": "13244088895893822",
+            "guid": "aa485c29-4f6e-4ff6-ada4-f67768fe5e68",
+            "id": "14",
+            "name": "CMS",
+            "type": "url",
+            "url": "https://cmsx.cs.cornell.edu/web/guest/"
+         }, {
+            "date_added": "13248837700518873",
+            "guid": "a2ace2c4-6f73-4838-80c8-665613657d60",
+            "id": "15",
+            "name": "Piazza",
+            "type": "url",
+            "url": "https://piazza.com/class/ke9y2wo88933mb"
+         }, {
+            "date_added": "13248837770868174",
+            "guid": "b36aaccd-e412-4f72-aab1-661a199e64df",
+            "id": "16",
+            "name": "Jira",
+            "type": "url",
+            "url": "https://hovergg.atlassian.net/secure/BrowseProjects.jspa?=&selectedProjectType=software"
+         }, {
+            "date_added": "13248837802439850",
+            "guid": "18a445d5-4a0b-4c6d-923b-f0a1320aec0c",
+            "id": "17",
+            "name": "dots",
+            "type": "url",
+            "url": "https://github.com/yasgur99/dots"
+         }, {
+            "date_added": "13224488060533667",
+            "guid": "dcec9fc3-1296-48c5-b6da-de5255a01ca7",
+            "id": "18",
+            "name": "mergg-site",
+            "type": "url",
+            "url": "https://github.com/Yasgur99/mergg-site"
+         } ],
+         "date_added": "13252569803342156",
+         "date_modified": "13248837802439850",
+         "guid": "00000000-0000-4000-a000-000000000002",
+         "id": "1",
+         "name": "Bookmarks bar",
+         "type": "folder"
+      },
+      "other": {
+         "children": [  ],
+         "date_added": "13252569803342156",
+         "date_modified": "0",
+         "guid": "00000000-0000-4000-a000-000000000003",
+         "id": "2",
+         "name": "Other bookmarks",
+         "type": "folder"
+      },
+      "synced": {
+         "children": [  ],
+         "date_added": "13252569803342158",
+         "date_modified": "0",
+         "guid": "00000000-0000-4000-a000-000000000004",
+         "id": "3",
+         "name": "Mobile bookmarks",
+         "type": "folder"
+      }
+   },
+   "sync_metadata": "CugBCscBCIiBAhLAARKMAQgCEk4KBgoCYm0QARAzGhIJgHwOBY62BQAhgHwOBY62BQAiFAlRlXkUjrYFABAKGRwIu0+njCJ1MhgKFggCETpb4hSOtgUAGAAhAAAAAAAAAAASOAoGCgJiZBAAEDMaEgmAfA4FjrYFACGAfA4FjrYFADIYChYIAhE6W+IUjrYFABgAIQAAAAAAAAAAIAAyH2s3bFVGbFRUZVFvZVFHS3NaX2o1Smp2OGZTNmdaaGNI6v+E0OYucOr/hNDmLhIAIAEqGFQ3OVUrdjJSU3JkQi9YcEQxeVAvVWc9PRKuAggREqkCChw0QW4xQ2lUSExuTU9jellvaDduZU1MbHdDcW89EqYBWjpBRHF0QVp4bDNvc0JsVEJLTW54QXFvSUs4MzJDN1EwaXBUcjB0TlBuQk1pQkdyOWhFY1dWZUV2d294VmR1aklEeU9pWlJkZGVmUUxTaTJOdmNZQjRtd040YnlNeTV4ME5laE83UnVBQS9QOHNENTY5WHhlcGRsNVRSbGIxS3o3RHZCc3FBRjJWZmFxVlQ2bTh4eklGU3lmRnNvbHNIZVpqcUE9PRgAIAAoADDv3OXtjrLtAjjI47vc2C5AyOO73NguShw3NTcrWUl5Z3lzSUJxNXBEclRPaDdEL2NPcTA9WiAiHv/9VXJ3LzNPdTF5QUhKNTdrMkZBNEJDMktjR1ljPWUo0OGpEq4CCBASqQIKHHJ0ZGsweXUwRlh1TEFLd3k4NVdvVVJsNkZUcz0SpgFaOkFEcXRBWnhsM29zQmxUQktNbnhBcW9JSzgzMkM3UTBpcFRyMHROUG5CTWlCR3I5aEVZMnl0S3gvWEp6NUJhVnhYbWpMN3c1dm96eTdJaVVFd05WNTBOOUlNWkQwWWlpS1FWUEtWTDVieDVWaXZiNGlWRkhNYXBZMzRaQlY3SWl0YythV1NUOGhDc3dIdVRrWXVCdC9TTDZNUzJyRnRqRWdKQT09GAAgACgAMO/c5e2Osu0COPXsudzYLkD17Lnc2C5KHDZ4bGFWRldnNWEvTFh0c3ZkTC9DTVp6eWd5cz1aICIe//pTZnpUTXM0ZW4yUUxpU1J5azFxK1owaTZUUWM9ZY0zLzESrgIIDhKpAgocTHo0QWVDWFMxY3FVNSt2ZmlPQVBiVTQzSytZPRKmAVo6QURxdEFaeGwzb3NCbFRCS01ueEFxb0lLODMyQ2pHNWFnZGYxL2Z5MmM0RXBHU3hpK2UweURPU3ZSQlY2TWZRSjQzQTVIN01oNnJOR1h0K0F2V3R6YjB5RHNvV3E3UjZXU2pldTlrNkp6NnpMWThDbTJNYnFoQXJ3L3B0SC8vUzBPNnQ1UEhQQVFFNkYyZEs3UFNRTVcvYlBBYS93TG9TVUNBPT0YACAAKAAw79zl7Y6y7QI4zKzBls0uQMyswZbNLkocL1Jaa3VwdXZOL2lkenQ0aXA3eWFCU2tsQm13PVogIh7/0nJtUE0xQjZDSW91TjlRSmZSUTROQkE0elErST1lAAAAABKtAggHEqgCChw1WWZpZ0tFMkFXRitpUkdINTNwTTZEUHpvOUk9EqYBWjpBRHF0QVp4bDNvc0JsVEJLTW54QXFvSUs4MzJDakc1YWdkZjEvZnkyYzRFcEdTeGkrYkh4b1ZYZnFuOXpEODhZT2dQTVhPWXp5MC81MVdUT1RDdk81amdzRGswWUZXcy9wQlBFUXlNR2JURkxLVWlTYVZSa3lBdzFqVkR2Vmg2SFNYZ0NXdzBjeDd0NWY3Mlk5UWJ0QTQ2cEFBK012cXRjc3c9PRgAIAIoAjDq7bKj4dHtAjjMrMGWzS5Ax6+E0OYuShw4K0ljMTFhaG1OcC9DM1ZLekNXRlA3clMxSW89Wh8iHe5sQmYzazFibVN3Z0gwREtTRXkzNDZYaGtkSHc9ZSjQ4akSrgIIDRKpAgoccDEwNi9ETGtyL1hVdDhJWDJIQnRtNFM5ZmYwPRKmAVo6QURxdEFaeGwzb3NCbFRCS01ueEFxb0lLODMyQ2pHNWFnZGYxL2Z5MmM0RXBHU3hpK2NyQ0ZjaWVxQlFlQXFoWFdyQm5acFBYbmMzalJyYTZuVVNYeHRGTGpENkdza0VpYnVrdHlvUjJscHVsaW90ZDUwYUNidk5vUE5yRVRkSGVsYTFSQmxrMUtWU3Z1MWpud0hnWDBjcVZ0U2xiZ1hzRWNRPT0YACAAKAAw79zl7Y6y7QI4zKzBls0uQMyswZbNLkocOXJhUWFaZ1ZUWW1QL0pmSjRzTHh0b01teEZ3PVogIh7/pTAyZXVUOEkzWjZNdXhMTy9VTm94NnZtRVc2WT1lcWSlPhKtAggMEqgCChxLNXUxeVIxRVJnZ2d6a1VRMDJCRjBJZnljdjQ9EqYBWjpBRHF0QVp4bDNvc0JsVEJLTW54QXFvSUs4MzJDakc1YWdkZjEvZnkyYzRFcEdTeGkrWllOMnVGNS9Jdlg1RmNoOFRxMy9tbGp3MnM5akxWNXV4UytVWkpvQk4wblZBWjdKalZjOG51SC9LeVhwSnNNS0UxS3VYTkNNYkkrTytkOFh2L0paK25GUG4wT3lUS3l4eXc3dEcwOVVHbFVmcW01VWc9PRgAIAAoADDv3OXtjrLtAjjMrMGWzS5AzKzBls0uShwrSTRIdzZuMGVTTDNMVnY0NzRUMm1zOXdFTGc9Wh8iHf9KWjlBanMyNnFiUFAyVXFScE1TZ0NhdEdZSVE9ZXFkpT4SrQIICxKoAgocNWRqTUpETENRZmdUQUFnUjhNVzIyYThZMTVzPRKmAVo6QURxdEFaeGwzb3NCbFRCS01ueEFxb0lLODMyQ2pHNWFnZGYxL2Z5MmM0RXBHU3hpK2Y0WDBDSGVWK3didGRacktxTFFsZTQ4ekZKNnpVNitheitLbzJlOVNuOVZpMmZodENlbjd4Y0JCTG5GVE5jaCtSRGNhc3VkWHFaOXdMZ1VoNXliTUV5NHEra24zdGx6b1VJVkVXdFhtQW4yeTl3d0FRPT0YACACKAIw0Krmo+HR7QI4zKzBls0uQMW7hNDmLkocbTdVZE5NTC9Bc1Jjc1ZidXFFNVBwQktLY1MwPVofIh3/NWNkMFk2czlsOXU2NGNCUFZHcmNYRjhndDgwPWVxZKU+Eq4CCBISqQIKHHlWenhreFJndkxoZmtUR0JDR29TWVZDenJuZz0SpgFaOkFEcXRBWnhsM29zQmxUQktNbnhBcW9JSzgzMkNqRzVhZ2RmMS9meTJjNEVwR1N4aStYdE9yL1ZCUktRSTROczEwenQ3MkJkN0d1bDJrQVBlRVRoK05lS3pYZGZaM01Ld2dYcWdnV3RHd2dRRnRJZGw2UDJPREVTaS9nRTQrQ29BYmQ2MTRzL0pCSmd4OXJFNkVua2ZodGR0VXdkRU9pcW9qZz09GAAgACgAMO/c5e2Osu0COMyswZbNLkDMrMGWzS5KHGlQRlFhZitnY3oxYUsxVFJqN0VpZWJxc0NWZz1aICIe//43TGY5YWxRbERpWXpQUVVyWGVhMU1ZbU91TDQ9ZSjQ4akSrgIIDxKpAgoceUtnc0pUclZZRmxvRGYyRXdiR1VZaDNJNEdjPRKmAVo6QURxdEFaeGwzb3NCbFRCS01ueEFxb0lLODMyQzdRMGlwVHIwdE5QbkJNaUJHcjloRVJJRk8wN0E2NEVmMVcybTJ0dW1ZVnBNbi9xOTdCS1NVOUpsU1BCazcwWWwvWVFVczNTMU9qdVluSzlLaFVkSmNmWWZicmQ2YXpTcUcwbVRyVFFDZVByRW9DUWJxN3NIdHQrQk9mNGNNWTFMWGIxc3hBPT0YACAAKAAw79zl7Y6y7QI4qMe13NguQKjHtdzYLkocTDk2RzBBdmRmTnNnZGdoeWZtejhlck15RGVZPVogIh7/9GJlb3U5VXpmY09PNWEwU0NZbE5wNENuaWJVUT1lYBHXShKtAggJEqgCChxJVHdGb0xFZCtrRTg5QTk3c01hRmFuTS9iZkk9EqYBWjpBRHF0QVp4bDNvc0JsVEJLTW54QXFvSUs4MzJDakc1YWdkZjEvZnkyYzRFcEdTeGkrWnBJUFNoTGFNVFQvUmxaMi9aSnJQMHYzZ3hBa3A0YWNlMGhyM2RzZmdjSkJ6WlV3T2NBMlRabldJbEFRUU5FUDZqS0xKeGJpalcxRjdmVDV4Nm96MGpxRmRzZXU1TUdJaWNnR2NOZzYwWEtHTlRvSHc9PRgAIAIoAjDq7bKj4dHtAjjMrMGWzS5Ax6+E0OYuShx0bEJ0dTBuZHJhZndiZWV6M1lWcnhQVXlIWFU9Wh8iHftzanN0NVBqM1QxQjczUC9rZjROeGFINmthK0k9ZSC8ImUSwwEIAhK+AQocekRWR3JydFpMZE0rNEJUeWJnK0hDT3JXZ3lvPRJmWjpBRHF0QVp3endPOFJPd2pOVTUzM21pQXZkb2ZyVTExWFBZckVjUTZUYk1wTFdUOHlwWkNpR3U3bEI0ODNRdmFaTVpzaEtIaU9WSmtudUhrQkJ3QnBzSENxZEh5TE1GZWhvdz09GAAgACgAMKq0u6Hh0e0COABAAEocNXVzeS9jcGZwaTFFdG9CSERnWElzMHFiNHJBPVoAZQAAAAASqwEIARKmAQocL0VLTGFVVXlNZGJLRWsxQmEyVWlueURuZjdJPRJOWjpBRHF0QVp3aCtFdkhZRjA5R1FEYzNtVmJraVIyMlJROWxyM0IyZHFKalRwWXhoNHBvZjg2SWNRSWlxTmVtSG1IeHJCc0d2TWJ1bGU3GAAgACgAMKq0u6Hh0e0COABAAEocVStHR0l0WkVEcFpzSVNsT1VhSVR1SUxkTW5JPVoAZQAAAAASwwEIAxK+AQoceTVXRTI3dUk2dlgvRGVJU0hKem5qTXF1V1dzPRJmWjpBRHF0QVp4UEpXNytXTm13RlBhVlYraUZ1MnZIa0RVVzcxeTZjQmY1VUhSZktlZHJRSHNRNjgyV1hPSmtnRm1DNjRjbENWUzVkeUFybEtlSVdoa3RSdTFMbG5XbWtXMVN0Zz09GAAgACgAMKq0u6Hh0e0COABAAEocNzlsK0xSRVVwaWFFdkREK0c0M2NwWFN0d0JjPVoAZQAAAAASrQIIChKoAgocVWkwRjRNbTRaWHJUbEhxblY5SGhvNmpzQ1lZPRKmAVo6QURxdEFaeGwzb3NCbFRCS01ueEFxb0lLODMyQ2pHNWFnZGYxL2Z5MmM0RXBHU3hpK1VZK3ZCZVkvclU5WjUyZy9GUFJzaFFsYVRrQnQ0M2VMMkVjK3ExYUZkZURiU3ZJN0xzSG5aU0lWT2NWYjByVFNPOFhjTTRZUHZKRkVVME1uRDJTVzRvSDh1SlpjU3YwR1MzZjRTSVBVWmxFK0I5V2lRPT0YACACKAIw0Krmo+HR7QI4zKzBls0uQMS7hNDmLkocbytGSjZQYkc1ejhTcG9IS09JamlxaCtLTStzPVofIh39ZzBmekFLOGp4QThOTkRFbzQzanFRZGp6b3I0PWWx4+mnEq0CCAYSqAIKHEJXY1k0NE5VaktUOGpjQmE5Y3VPdGxYQmk1VT0SpgFaOkFEcXRBWnhsM29zQmxUQktNbnhBcW9JSzgzMkNqRzVhZ2RmMS9meTJjNEVwR1N4aStYRXZSMnZUbGQxYTE5ai90UXZmWGFwd0JWYXd6Zy9BU0pQY21tdFNCV1VtUTVtejgwZDNmZGl6akFJZWk3dmtBZERESnZTcFFLb0FTc2x5NU8zbVVWRGlvUGl4T0dHTnM4Nmk3NG9lOUNubkd2WHg2QT09GAAgAigCMOrtsqPh0e0COMyswZbNLkDHr4TQ5i5KHFo3SHNRWEoyUVBWUTFzNkxiT1pXcWdxeFYybz1aHyId3TA1MkpTQTh2WDF6TjNGNE5hWDVEeDJqZFB0ND1lKNDhqRKsAggFEqcCChxUVm9jMG5HR0VsZkRJdUMwekNTaGptNHFpdHc9EqYBWjpBRHF0QVp4bDNvc0JsVEJLTW54QXFvSUs4MzJDakc1YWdkZjEvZnkyYzRFcEdTeGkrYXkvZFdKb3BNSzZaeG5PdGtxSmU2ZWlsM3NIOFRNcUREMHFqSmlaYUptbStSYnNZVThZamNCeGZ6TGhpOStMYWxPTWgyeXB4RmdIdy9QSTdVNVJVVzBLZ1hXRjJnUEwwbkw1dzhxRDc2L0xYYzdiQWc9PRgAIAIoAjDq7bKj4dHtAjjMrMGWzS5Axq+E0OYuShxnbzFXQ1VFOXZLK1ZkWlV3RTdmakFnRzJ4Mlk9Wh4iHHZTMzhzQWFNM3M3RW1RbEdWNS8rMVVQOXk0ND1ld7UFWBKtAggIEqgCChwvaGdHOEoxSVM1YjVKZzhwRFQvYXNWOTZBbXc9EqYBWjpBRHF0QVp4bDNvc0JsVEJLTW54QXFvSUs4MzJDakc1YWdkZjEvZnkyYzRFcEdTeGkrVDNvWWIySkVqQTVMblNGdEpEUHhTK3ptZHJURUpIMHZMR2VQNWxBc085WUg5azVPVElHVC93RUVXbFJIdCt1WCs5T3VOZERscmtTSDkvL015WnhKZ0FPRjBldDZDUytVRjJCS05LUEhqOGhuVlowT3c9PRgAIAIoAjDq7bKj4dHtAjjMrMGWzS5Ax6+E0OYuShxnUW5OTS9oQUlhZUdkRXF5bTQwc2xsMXNDTnc9Wh8iHfdUWFRrWXlqUkExSDVON3Jac0xtdEJyMUtFMlU9ZSjQ4akYASCbhIXQ5i4=",
+   "version": 1
+}
