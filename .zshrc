@@ -303,3 +303,6 @@ ex ()
 
 neofetch
 alias dots='/usr/bin/git --git-dir=/home/yasgur99/.cfg/ --work-tree=/home/yasgur99
+
+# Harmony for CS4410
+export PATH=$PATH:$HOME/Cornell/cs4410/harmony-0.9
