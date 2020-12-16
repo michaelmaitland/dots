@@ -35,8 +35,8 @@ from libqtile import layout, bar, widget, hook
 from libqtile.widget import Spacer
 
 #mod4 or mod = super key
-mod = "mod1"
-mod1 = "mod4"
+mod = "mod4"
+mod1 = "mod1"
 mod2 = "control"
 home = os.path.expanduser('~')
 
@@ -72,7 +72,7 @@ keys = [
     Key([mod], "x", lazy.spawn('arcolinux-logout')),
     Key([mod], "f", lazy.window.toggle_fullscreen()),
     Key([mod], "p", lazy.spawn('maim -s /tmp/screenshot.png; imgur.sh /tmp/screenshot.png | xclip -selection clipboard')),
-    Key([mod], "o", lazy.spawn('maim -s ~/Pictures/screenshots/$(date +%F-%T)')),
+    Key([mod], "o", lazy.spawn('maim -s ~/Pictures/screenshots/$(date +%F-%T).png')),
     # CHANGE FOCUS
     Key([mod], "k", lazy.layout.up()),
     Key([mod], "j", lazy.layout.down()),
