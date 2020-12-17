@@ -15,7 +15,6 @@ while pgrep -u $UID -x polybar > /dev/null; do sleep 1; done
 desktop=$(echo $DESKTOP_SESSION)
 count=$(xrandr --query | grep " connected" | cut -d" " -f1 | wc -l)
 
-
 case $desktop in
 
     i3|/usr/share/xsessions/i3)
@@ -93,10 +92,10 @@ case $desktop in
     xmonad|/usr/share/xsessions/xmonad)
     if [ $count = 1 ]; then
       m=$(xrandr --query | grep " connected" | cut -d" " -f1)
-      MONITOR=$m polybar --reload mainbar-xmonad -c ~/.config/polybar/config &
+      MONITOR=$m polybar --reload main -c ~/.config/polybar/config.ini &
     else
       for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
-        MONITOR=$m polybar --reload mainbar-xmonad -c ~/.config/polybar/config &
+        MONITOR=$m polybar --reload secondary -c ~/.config/polybar/config.ini &
       done
     fi
     # second polybar at bottom
