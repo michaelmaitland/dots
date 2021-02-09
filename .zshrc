@@ -1,3 +1,6 @@
+# neofetch at the start to avoid powerlevel from complaining about output 
+neofetch
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -308,7 +311,6 @@ ex ()
 
 [[ -f ~/.zshrc-personal ]] && . ~/.zshrc-personal
 
-neofetch
 alias dots='/usr/bin/git --git-dir=/home/yasgur99/.cfg/ --work-tree=/home/yasgur99'
 
 # Harmony for CS4410
@@ -316,3 +318,6 @@ export PATH=$PATH:$HOME/Cornell/cs4410/harmony-0.9
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# opam configuration
+test -r /home/yasgur99/.opam/opam-init/init.zsh && . /home/yasgur99/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
