@@ -237,9 +237,11 @@ set tw=80
 " Be smart when using tabs ;)
 set smarttab
 
-" 1 tab == 4 spaces
-set shiftwidth=4
-set tabstop=4
+" 1 tab == 2 spaces
+set shiftwidth=2
+set tabstop=2
+set expandtab
+set softtabstop=2
 
 " linebreak on 500 characters
 set lbr
@@ -309,4 +311,7 @@ for tool in s:opam_packages
     call s:opam_configuration[tool]()
   endif
 endfor
+
+:execute "helptags " . substitute(system('opam config var share'),'\n$','','''') .  "/merlin/vim/doc"
+
 " ## end of OPAM user-setup addition for vim / base ## keep this line
