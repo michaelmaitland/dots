@@ -23,10 +23,9 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'scrooloose/nerdtree'
 "Plugin 'frazrepo/vim-rainbow'
 Plugin 'plasticboy/vim-markdown'
-
+Plugin 'scrooloose/syntastic'
 " Plugin 'vim-python/python-syntax'
 "Plugin 'jreybert/vimagit'
-" Plugin 'severin-lemaignan/vim-minimap'
 "Plugin 'ap/vim-css-color'                           " Color previews for CSS
 " Plugin 'tpope/vim-surround'                         " Change surrounding marks
 
@@ -194,7 +193,7 @@ set noshowmode
 set laststatus=2
 
 " Format the status line
-set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l\ \ Column:\ %c
+"set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l\ \ Column:\ %c
 
 set number relativenumber
 
@@ -312,6 +311,15 @@ for tool in s:opam_packages
   endif
 endfor
 
-:execute "helptags " . substitute(system('opam config var share'),'\n$','','''') .  "/merlin/vim/doc"
-
 " ## end of OPAM user-setup addition for vim / base ## keep this line
+
+" Syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_ocaml_checkers = ['merlin']
