@@ -20,8 +20,7 @@ Plugin 'itchyny/lightline.vim'                      " Lightline statusbar
 Plugin 'godlygeek/tabular'
 Plugin 'majutsushi/tagbar'
 Plugin 'airblade/vim-gitgutter'
-Plugin 'scrooloose/nerdtree'
-"Plugin 'frazrepo/vim-rainbow'
+Plugin 'preservim/nerdtree'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'scrooloose/syntastic'
 " Plugin 'vim-python/python-syntax'
@@ -59,11 +58,7 @@ set autoread
 au FocusGained,BufEnter * checktime
 
 " With a map leader it's possible to do extra key combinations
-" like <leader>w saves the current file
 let mapleader = ","
-
-" Fast saving
-nmap <leader>w :w!<cr>
 
 " :W sudo saves the file 
 " (useful for handling the permission-denied error)
@@ -173,18 +168,12 @@ endif
 	"nmap <Leader>0 <Plug>lightline#bufferline#go(10)
 
 " Gruvbox Settings
-	let g:gruvbox_material_background = 'soft'
-	let g:gruvbox_material_transparent_background = 0
-	let g:gruvbox_material_enable_bold = 1
-	let g:gruvbox_material_enable_italic = 1
-
-" Nord Settings
-	let g:nord_uniform_status_lines = 1
-	let g:nord_uniform_diff_background = 1
-	let g:nord_bold = 1
-	let g:nord_italic = 1
-	let g:nord_italic_comments = 1
-	let g:nord_underline = 1
+set background=dark
+let g:gruvbox_material_background = 'soft'
+let g:gruvbox_material_transparent_background = 1
+let g:gruvbox_material_enable_bold = 1
+let g:gruvbox_material_enable_italic = 1
+colorscheme gruvbox-material
 
 " Uncomment to prevent non-normal modes showing in powerline and below powerline.
 set noshowmode
@@ -212,21 +201,6 @@ endif
 " Set utf8 as standard encoding and en_US as the standard language
 set encoding=utf8
 
-" GitGutter
-	nmap ) <Plug>(GitGutterNextHunk)
-	nmap ( <Plug>(GitGutterPrevHunk)
-	let g:gitgutter_enabled = 1
-	let g:gitgutter_map_keys = 0
-	let g:gitgutter_highlight_linenrs = 1
-
-" Nerd tree
-	map <leader>n :NERDTreeToggle<CR>
-	autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-	let NERDTreeMinimalUI = 1
-	let NERDTreeDirArrows = 1
-
-" TagBar
-	nmap <leader>t :TagbarToggle<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Text and indents 
@@ -323,3 +297,22 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_ocaml_checkers = ['merlin']
+
+" vim-gitgutter
+set updatetime=750
+let g:gitgutter_enabled = 1
+let g:gitgutter_map_keys = 0
+"let g:gitgutter_highlight_linenrs = 1
+"let g:gitgutter_override_sign_column_highlight = 1
+nmap <Leader>gn <Plug>(GitGutterNextHunk)  " git next
+nmap <Leader>gp <Plug>(GitGutterPrevHunk)  " git previous
+
+" Nerd tree
+map <leader>n :NERDTreeToggle<CR>
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+let NERDTreeMinimalUI = 1
+let NERDTreeDirArrows = 1
+
+" TagBar
+nmap <leader>t :TagbarToggle<CR>
+
