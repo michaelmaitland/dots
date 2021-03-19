@@ -23,6 +23,7 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'preservim/nerdtree'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'scrooloose/syntastic'
+Plugin 'sbdchd/neoformat'
 " Plugin 'vim-python/python-syntax'
 "Plugin 'jreybert/vimagit'
 "Plugin 'ap/vim-css-color'                           " Color previews for CSS
@@ -168,7 +169,11 @@ endif
 	"nmap <Leader>0 <Plug>lightline#bufferline#go(10)
 
 " Gruvbox Settings
+set termguicolors
+" set t_Co=256
 set background=dark
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 let g:gruvbox_material_background = 'soft'
 let g:gruvbox_material_transparent_background = 1
 let g:gruvbox_material_enable_bold = 1
@@ -253,6 +258,7 @@ function! HasPaste()
     endif
     return ''
 endfunction
+
 " ## added by OPAM user-setup for vim / base ## 93ee63e278bdfc07d1139a748ed3fff2 ## you can edit, but keep this line
 let s:opam_share_dir = system("opam config var share")
 let s:opam_share_dir = substitute(s:opam_share_dir, '[\r\n]*$', '', '')
@@ -284,7 +290,6 @@ for tool in s:opam_packages
     call s:opam_configuration[tool]()
   endif
 endfor
-
 " ## end of OPAM user-setup addition for vim / base ## keep this line
 
 " Syntastic
@@ -316,3 +321,5 @@ let NERDTreeDirArrows = 1
 " TagBar
 nmap <leader>t :TagbarToggle<CR>
 
+" Neoformat
+let g:neoformat_enabled_ocaml = ['ocamlformat']
