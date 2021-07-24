@@ -321,3 +321,6 @@ export PATH=$PATH:$HOME/Cornell/cs4410/harmony-0.9
 
 # opam configuration
 test -r /home/yasgur99/.opam/opam-init/init.zsh && . /home/yasgur99/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
+
+# RUST
+. "$HOME/.cargo/env"

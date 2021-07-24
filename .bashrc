@@ -222,3 +222,6 @@ ex ()
 
 neofetch
 alias dots='/usr/bin/git --git-dir=/home/yasgur99/.cfg/ --work-tree=/home/yasgur99'
+
+# RUST 
+. "$HOME/.cargo/env"
