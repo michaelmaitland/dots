@@ -1,40 +1,35 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Vundle For Managing Plugins
+" => vim-plug For Managing Plugins
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+call plug#begin()
+" The default plugin directory will be as follows:
+"   - Vim (Linux/macOS): '~/.vim/plugged'
+"   - Vim (Windows): '~/vimfiles/plugged'
+"   - Neovim (Linux/macOS/Windows): stdpath('data') . '/plugged'
+" You can specify a custom plugin directory by passing it as the argument
+"   - e.g. `call plug#begin('~/.vim/plugged')`
+"   - Avoid using standard Vim directory names like 'plugin'
 
-set nocompatible              " be iMproved, required
-filetype off                  " required
+" Make sure you use single quotes
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
+Plug 'junegunn/vim-easy-align'
+Plug 'itchyny/lightline.vim'                      
+Plug 'ryanoasis/vim-devicons'
+Plug 'frazrepo/vim-rainbow'
+Plug 'vim-python/python-syntax'
+Plug 'severin-lemaignan/vim-minimap'
+Plug 'tpope/vim-surround'                         
+Plug 'morhetz/gruvbox'
+Plug 'tpope/vim-fugitive'
+Plug 'scrooloose/nerdtree'
+Plug 'airblade/vim-gitgutter'
+Plug 'rhysd/vim-clang-format'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'wellle/context.vim'
 
-call vundle#begin()		" required, all plugins must appear after this line.
-
-Plugin 'VundleVim/Vundle.vim'							" Vundle
-Plugin 'itchyny/lightline.vim'                      " Lightline statusbar
-Plugin 'ryanoasis/vim-devicons'
-Plugin 'frazrepo/vim-rainbow'
-Plugin 'vim-python/python-syntax'
-Plugin 'jreybert/vimagit'
-Plugin 'severin-lemaignan/vim-minimap'
-Plugin 'ap/vim-css-color'                           " Color previews for CSS
-Plugin 'tpope/vim-surround'                         " Change surrounding marks
-Plugin 'dracula/vim', { 'name': 'dracula' }
-
-call vundle#end()		" required, all plugins must appear before this line.
-
-filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
-
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
+" Initialize plugin system
+call plug#end()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
@@ -52,14 +47,11 @@ au FocusGained,BufEnter * checktime
 
 " With a map leader it's possible to do extra key combinations
 " like <leader>w saves the current file
-let mapleader = ","
-
-" Fast saving
-nmap <leader>w :w!<cr>
+let mapleader = "\<Space>"
 
 " :W sudo saves the file 
 " (useful for handling the permission-denied error)
-command! W execute 'w !sudo tee % > /dev/null' <bar> edit!
+" command! W execute 'w !sudo tee % > /dev/null' <bar> edit!
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
@@ -71,14 +63,15 @@ set so=7
 let $LANG='en' 
 set langmenu=en
 
-" Turn on the Wild menu
+" Turn on the Wild menu and bash like autocomplete for commands
+set wildmode=longest,list,full
 set wildmenu
 
 " Ignore compiled files
 set wildignore=*.o,*~,*.pyc
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store
 
-"Always show current position
+" Show the line and column number of the cursor position
 set ruler
 
 " Height of the command bar
@@ -114,6 +107,7 @@ set mouse=nicr
 
 " Show matching brackets when text indicator is over them
 set showmatch 
+
 " How many tenths of a second to blink when matching brackets
 set mat=2
 
@@ -126,19 +120,26 @@ set tm=500
 " Add a bit extra margin to the left
 set foldcolumn=1
 
+" show 80 chars bar
+set colorcolumn=80
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Powerline, Colors, and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:lightline = {
-      \ 'colorscheme': 'darcula',
-      \ }
+  \ 'colorscheme': 'gruvbox',
+  \ 'active': {
+  \   'left': [ [ 'mode', 'paste' ],
+  \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+  \ },
+  \ 'component_function': {
+  \   'gitbranch': 'FugitiveHead'
+  \ },
+\ }
+
 
 " Always show statusline
 set laststatus=2
-
-" Format the status line
-set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l\ \ Column:\ %c
-
 
 " Use 256 colours (Use this setting only if your terminal supports 256 colours)
 set t_Co=256
@@ -150,20 +151,20 @@ let g:rehash256 = 1
 set noshowmode
 
 syntax enable   
-let g:dracula_colorterm = 0
-colorscheme dracula
+let g:gruvbox_contrast_dark="soft"
+colorscheme gruvbox 
+set background=dark
 
 " Set extra options when running in GUI mode
-if has("gui_running")
-    set guioptions-=T
-    set guioptions-=e
-    set t_Co=256
-    set guitablabel=%M\ %t
-endif
+"if has("gui_running")
+"    set guioptions-=T
+"    set guioptions-=e
+"    set t_Co=256
+"    set guitablabel=%M\ %t
+"endif
 
 " Set utf8 as standard encoding and en_US as the standard language
 set encoding=utf8
-
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Text and indents 
@@ -173,9 +174,15 @@ set tw=80
 " Be smart when using tabs ;)
 set smarttab
 
-" 1 tab == 4 spaces
-set shiftwidth=4
-set tabstop=4
+" Set 1 tab == 2 spaces
+" tabstop:          Width of tab character
+" softtabstop:      Fine tunes the amount of white space to be added
+" shiftwidth        Determines the amount of whitespace to add in normal mode
+" expandtab:        When this option is enabled, vi will use spaces instead of tabs
+set tabstop=2
+set softtabstop=2
+set shiftwidth =2
+set expandtab
 
 " linebreak on 500 characters
 set lbr
@@ -184,14 +191,6 @@ set tw=500
 set ai "auto indent
 set si "smart indent
 set wrap "wrap lines
-
-
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Remap Keys
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"Remap ESC to ii
-:imap ii <Esc>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Turn persistent undo on 
@@ -204,15 +203,46 @@ catch
 endtry
 
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Helper functions
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Returns true if paste mode is enabled
-function! HasPaste()
-    if &paste
-        return 'PASTE MODE  '
-    endif
-    return ''
-endfunction
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => NERDTree
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nnoremap <leader>e :NERDTreeToggle<CR>
 
+" Start NERDTree. If a file is specified, move the cursor to its window.
+" autocmd StdinReadPre * let s:std_in=1
+" autocmd VimEnter * NERDTree | if argc() > 0 || exists("s:std_in") | wincmd p | endif
 
+" Exit Vim if NERDTree is the only window remaining in the only tab.
+autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
+
+" Close the tab if NERDTree is the only window remaining in it.
+autocmd BufEnter * if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
+
+" If another buffer tries to replace NERDTree, put it in the other window, and bring back NERDTree.
+autocmd BufEnter * if bufname('#') =~ 'NERD_tree_\d\+' && bufname('%') !~ 'NERD_tree_\d\+' && winnr('$') > 1 |
+    \ let buf=bufnr() | buffer# | execute "normal! \<C-W>w" | execute 'buffer'.buf | endif
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => vim-clang-format
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" TODO: improve clang-format binary selection, especially since there is a good
+" chance it won't be here on different systems.
+let g:clang_format#command = '/work/tools/clang/12.0.1/bin/clang-format'
+let g:clang_format#code_style = 'LLVM'
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => fzf.vim
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Initialize configuration dictionary
+let g:fzf_vim = {}
+let g:fzf_layout = { 'down': '40%' }
+
+" Add some shortcuts for common fzf operations
+nnoremap <leader>f :Files<CR>
+nnoremap <leader>g :GFiles<CR>
+nnoremap <leader>b :Buffers<CR>
+nnoremap <leader>t :Tags<CR>
+
+" Add some shortcuts based on projects you work on often.
+nnoremap <leader>fl :Files llvm<CR>
+nnoremap <leader>fr :Files llvm/lib/Target/RISCV<CR>
